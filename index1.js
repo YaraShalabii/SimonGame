@@ -80,7 +80,7 @@ $(document).one("keydown", function startGame() {
         gameOverSound.play();
       }
       $(document).one("keydown", function () {
-        startGame();
+         window.location.reload();
       });
     }
   });
