@@ -60,11 +60,15 @@ $(document).one("keydown", function startGame() {
 
       if (x == 0) {
         gameLevel++;
+        setTimeout(levelUp, 1000);
+        function levelUp() {
+          $("h1").html("Level " + gameLevel);
+        }
         randomNum();
         var nextLevelArray = $(".btn")[nextLevel];
         simon.push(nextLevelArray);
         setTimeout(playRandomly, 1000);
-        $("h1").html("Level " + gameLevel);
+        
         x = simon.length;
       }
     } else {
